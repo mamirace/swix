@@ -1,3 +1,7 @@
+# Büyük dosyalar ve gereksiz Vuexy theme dosyaları
+vuexy-admin-v10.11.1/
+*.zip
+
 # Logs
 logs
 *.log
