@@ -14,9 +14,51 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
+// Statik dosya servisi - assets klasörü (Vuexy tema dosyaları)
+app.use('/assets', express.static(join(__dirname, 'assets'), {
+    maxAge: process.env.NODE_ENV === 'production' ? '1y' : '0',
+    etag: true,
+    lastModified: true
+}));
+
 // Ana sayfa route - index.html
 app.get('/', (req, res) => {
     res.sendFile(join(__dirname, 'index.html'));
+});
+
+// Login sayfası route - Vuexy login
+app.get('/login', (req, res) => {
+    res.sendFile(join(__dirname, 'views/login.html'));
+});
+
+// Login POST handler - form işleme
+app.post('/dashboard', (req, res) => {
+    const { 'email-username': emailUsername, password } = req.body;
+    
+    // Basit login kontrolü (gerçek projede veritabanı kullanın)
+    if (emailUsername && password) {
+        // Başarılı login - ana sayfaya yönlendir
+        res.redirect('/?login=success');
+    } else {
+        // Başarısız login - login sayfasına geri dön
+        res.redirect('/login?error=invalid_credentials');
+    }
+});
+
+// Register sayfası route (gelecekte eklenebilir)
+app.get('/register', (req, res) => {
+    res.json({
+        message: 'Register sayfası henüz hazırlanmadı',
+        redirect: '/login'
+    });
+});
+
+// Forgot password route (gelecekte eklenebilir)
+app.get('/forgot-password', (req, res) => {
+    res.json({
+        message: 'Şifre sıfırlama sayfası henüz hazırlanmadı',
+        redirect: '/login'
+    });
 });
 
 // API endpoint - Örnek API route
@@ -34,8 +76,15 @@ app.get('/api/health', (req, res) => {
 app.get('/api/info', (req, res) => {
     res.json({
         name: 'Swix Dashboard',
-        description: 'Basit Node.js web uygulaması - Tema dosyaları için hazır',
-        tech: ['Node.js', 'Express', 'HTML5'],
+        description: 'Vuexy Temalı Node.js Dashboard',
+        tech: ['Node.js', 'Express', 'Vuexy Bootstrap 5'],
+        features: [
+            'Vuexy Login Sayfası',
+            'Professional UI',
+            'Responsive Design',
+            'Bootstrap 5',
+            'Modern Authentication'
+        ],
         author: 'mamirace',
         github: 'https://github.com/mamirace/swix'
     });
@@ -80,12 +129,13 @@ app.listen(PORT, () => {
 🚀 Swix Dashboard sunucusu başlatıldı!
 📍 Port: ${PORT}
 🌐 Local: http://localhost:${PORT}
+� Login: http://localhost:${PORT}/login
 🔗 API Health: http://localhost:${PORT}/api/health
 🔗 API Info: http://localhost:${PORT}/api/info
 📱 Environment: ${process.env.NODE_ENV || 'development'}
 ⏰ Started at: ${new Date().toLocaleString('tr-TR')}
 
-✨ Tema dosyaları için hazır - Sadece 'Merhaba' gösteriliyor
+🎨 Vuexy teması entegre edildi!
     `);
 });
 
