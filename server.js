@@ -14,13 +14,6 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
-// Statik dosya servisi - assets klasörü
-app.use('/assets', express.static(join(__dirname, 'assets'), {
-    maxAge: process.env.NODE_ENV === 'production' ? '1y' : '0',
-    etag: true,
-    lastModified: true
-}));
-
 // Ana sayfa route - index.html
 app.get('/', (req, res) => {
     res.sendFile(join(__dirname, 'index.html'));
@@ -41,16 +34,8 @@ app.get('/api/health', (req, res) => {
 app.get('/api/info', (req, res) => {
     res.json({
         name: 'Swix Dashboard',
-        description: 'Modern Node.js web dashboard',
-        theme: 'Vuexy inspired',
-        tech: ['Node.js', 'Express', 'HTML5', 'CSS3', 'JavaScript ES6+'],
-        features: [
-            'Responsive Design',
-            'Modern UI Components', 
-            'Interactive Animations',
-            'GitHub Pages Compatible',
-            'Hostinger Ready'
-        ],
+        description: 'Basit Node.js web uygulaması - Tema dosyaları için hazır',
+        tech: ['Node.js', 'Express', 'HTML5'],
         author: 'mamirace',
         github: 'https://github.com/mamirace/swix'
     });
@@ -95,11 +80,12 @@ app.listen(PORT, () => {
 🚀 Swix Dashboard sunucusu başlatıldı!
 📍 Port: ${PORT}
 🌐 Local: http://localhost:${PORT}
-📂 Static files: /assets
 🔗 API Health: http://localhost:${PORT}/api/health
 🔗 API Info: http://localhost:${PORT}/api/info
 📱 Environment: ${process.env.NODE_ENV || 'development'}
 ⏰ Started at: ${new Date().toLocaleString('tr-TR')}
+
+✨ Tema dosyaları için hazır - Sadece 'Merhaba' gösteriliyor
     `);
 });
 

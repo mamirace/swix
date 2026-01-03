@@ -1,30 +1,56 @@
-# 🌟 Web Sitem - Modern Dashboard Teması
+# 🌟 Swix Dashboard - Basit Node.js Uygulaması
 
-Hostinger Business Hosting ile güçlendirilmiş, Vuexy temasından ilham alınarak geliştirilmiş modern web sitesi.
+Tema dosyaları için hazırlanmış temiz Node.js web uygulaması.
 
-## 📋 Özellikler
+## 📋 Mevcut Durum
 
-- ✨ Modern ve responsive tasarım
-- 🎨 Vuexy teması benzeri görsel öğeler
-- 📱 Mobil uyumlu (Mobile-first approach)
-- ⚡ Hızlı yükleme ve optimized performans
-- 🎯 Ana sayfada özel "Merhaba" mesajı
-- 🎪 İnteraktif animasyonlar ve efektler
-- 🌙 Gradient renk şeması
-- 🔧 Kolay özelleştirilebilir
+- ✅ Basit "Merhaba" sayfası
+- ✅ Node.js + Express server
+- ✅ API endpoints
+- 🎨 Tema dosyaları bekleniyor
 
 ## 🗂️ Dosya Yapısı
 
 ```
 swix/
-├── index.html              # Ana sayfa
-├── assets/
-│   ├── css/
-│   │   └── style.css      # Ana stil dosyası
-│   └── js/
-│       └── script.js      # JavaScript fonksiyonları
+├── package.json           # Node.js proje ayarları
+├── server.js              # Express sunucu
+├── index.html             # Basit "Merhaba" sayfası
 └── README.md              # Bu dosya
 ```
+
+## 🚀 Çalıştırma
+
+```bash
+npm install
+npm start
+```
+
+Sunucu http://localhost:3000 adresinde başlayacak.
+
+## 🔗 API Endpoints
+
+- `GET /` - Ana sayfa (Merhaba)
+- `GET /api/health` - Sunucu durumu
+- `GET /api/info` - Proje bilgileri
+
+## 📦 Tema Entegrasyonu İçin Hazır
+
+Bu yapı tema dosyalarının eklenmesi için optimize edilmiştir. Tema dosyalarını:
+
+1. **CSS dosyaları:** `assets/css/` klasörüne
+2. **JS dosyaları:** `assets/js/` klasörüne
+3. **Images:** `assets/img/` klasörüne
+
+ekleyebilirsiniz. Server.js statik dosya servisi için hazır.
+
+## 🌐 Deployment
+
+- **Hostinger:** Node.js hosting ile uyumlu
+- **Heroku:** `package.json` hazır
+- **Vercel:** Zero-config deployment
+
+**GitHub Repository:** https://github.com/mamirace/swix
 
 ## 🚀 Hostinger'a Yükleme
 
