@@ -1,0 +1,37 @@
+{
+  "name": "swix-dashboard",
+  "version": "1.0.0",
+  "description": "Modern Node.js web dashboard inspired by Vuexy theme with Merhaba homepage",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dashboard",
+    "nodejs",
+    "express",
+    "web",
+    "vuexy",
+    "turkish",
+    "hostinger"
+  ],
+  "author": "mamirace",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mamirace/swix.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mamirace/swix/issues"
+  },
+  "homepage": "https://github.com/mamirace/swix#readme"
+}
