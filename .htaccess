@@ -20,8 +20,8 @@
     RewriteCond %{REQUEST_FILENAME} -d
     RewriteRule ^ - [L]
     
-    # Tüm istekleri başlat.php'ye yönlendir
-    RewriteRule ^ başlat.php [QSA,L]
+    # Tüm istekleri index.php'ye yönlendir
+    RewriteRule ^ index.php [QSA,L]
 </IfModule>
 
 # Dizin listelemeyi kapat
