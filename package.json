@@ -1,37 +1,23 @@
 {
-  "name": "swix-dashboard",
+  "name": "swix-dashboard-python",
   "version": "1.0.0",
-  "description": "Modern Node.js web dashboard inspired by Vuexy theme with Merhaba homepage",
-  "main": "server.js",
-  "type": "module",
+  "description": "Modern Python Flask Vuexy admin dashboard with Turkish localization",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "python:start": "python başlat.py",
+    "python:dev": "python sunucu/sunucu.py",
+    "python:install": "pip install -r requirements.txt"
   },
   "keywords": [
     "dashboard",
-    "nodejs",
-    "express",
-    "web",
+    "admin-panel", 
+    "python",
+    "flask",
     "vuexy",
-    "turkish",
-    "hostinger"
+    "bootstrap",
+    "crm",
+    "turkish"
   ],
   "author": "mamirace",
   "license": "MIT",
-  "dependencies": {
-    "express": "^4.18.2"
-  },
-  "engines": {
-    "node": ">=16.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mamirace/swix.git"
-  },
-  "bugs": {
-    "url": "https://github.com/mamirace/swix/issues"
-  },
-  "homepage": "https://github.com/mamirace/swix#readme"
+  "note": "Bu proje JavaScript/Node.js'den Python Flask'a çevrilmiştir. Python komutları için npm scripts kullanabilirsiniz."
 }

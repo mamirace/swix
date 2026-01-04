@@ -1,0 +1,37 @@
+{
+    "name": "swix/dashboard-php",
+    "description": "Swix Dashboard - Modern PHP Vuexy Admin Dashboard",
+    "version": "1.0.0",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mamirace",
+            "email": "info@mamirace.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "ext-mysqli": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*"
+    },
+    "require-dev": {},
+    "autoload": {
+        "files": [
+            "yapılandırma/ayarlar.php",
+            "genel/yardımcılar.php",
+            "veritabani/__init__.php"
+        ]
+    },
+    "scripts": {
+        "start": "php -S localhost:3000 başlat.php",
+        "dev": "php -S localhost:3000 başlat.php",
+        "test": "php veritabani/sql_baglantisi.php"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}
