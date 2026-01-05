@@ -1,5 +1,5 @@
 <?php
-// 🛠️ Swix Dashboard - PHP Yardımcı Fonksiyonlar
+// 🛠️ Swixx Dashboard - PHP Yardımcı Fonksiyonlar
 // Python yardımcılar.py dosyasının PHP karşılığı  
 // Bu dosya genel kullanım için yardımcı fonksiyonları içerir
 
@@ -133,6 +133,92 @@ function json_yanit($data, $status_code = 200) {
 function yonlendir($url) {
     header("Location: $url");
     exit;
+}
+
+/**
+ * Token ile şifre güncelleme
+ * @param string $token Reset token'ı
+ * @param string $yeni_sifre Yeni şifre
+ * @return array Sonuç dizisi
+ */
+function token_ile_sifre_guncelle($token, $yeni_sifre) {
+    try {
+        require_once __DIR__ . '/../veritabani/sql_baglantisi.php';
+        
+        // Token dosyasından token'ı ara
+        $token_file = __DIR__ . '/../temp/reset_tokens.json';
+        if (!file_exists($token_file)) {
+            return [
+                'success' => false,
+                'message' => 'Geçersiz token'
+            ];
+        }
+        
+        $tokens = json_decode(file_get_contents($token_file), true) ?: [];
+        $found_token = null;
+        
+        foreach ($tokens as $t) {
+            if ($t['token'] === $token && $t['expires'] > time()) {
+                $found_token = $t;
+                break;
+            }
+        }
+        
+        if (!$found_token) {
+            return [
+                'success' => false,
+                'message' => 'Geçersiz veya süresi dolmuş token'
+            ];
+        }
+        
+        $email = $found_token['email'];
+        
+        // Kullanıcıyı bul
+        $sorgu = "SELECT id FROM Kullanicilar WHERE mail = ? AND active = 1";
+        $result = vt_sorgu($sorgu, [$email]);
+        
+        if (!$result || empty($result)) {
+            return [
+                'success' => false,
+                'message' => 'Kullanıcı bulunamadı'
+            ];
+        }
+        
+        $kullanici_id = $result[0][0];
+        
+        // Şifreyi hash'le
+        $hashlenmis_sifre = password_hash($yeni_sifre, PASSWORD_DEFAULT);
+        
+        // Şifreyi güncelle
+        $guncelle_sorgu = "UPDATE Kullanicilar SET sifre = ? WHERE id = ?";
+        $guncelle_sonuc = vt_guncelle($guncelle_sorgu, [$hashlenmis_sifre, $kullanici_id]);
+        
+        if ($guncelle_sonuc > 0) {
+            // Token'ı dosyadan sil
+            $tokens = array_filter($tokens, function($t) use ($token) {
+                return $t['token'] !== $token;
+            });
+            file_put_contents($token_file, json_encode($tokens, JSON_PRETTY_PRINT));
+            
+            return [
+                'success' => true,
+                'message' => 'Şifre başarıyla güncellendi',
+                'email' => $email
+            ];
+        } else {
+            return [
+                'success' => false,
+                'message' => 'Şifre güncellenirken hata oluştu'
+            ];
+        }
+        
+    } catch (Exception $e) {
+        error_log('Token ile şifre güncelleme hatası: ' . $e->getMessage());
+        return [
+            'success' => false,
+            'message' => 'Sistem hatası'
+        ];
+    }
 }
 
 // Test

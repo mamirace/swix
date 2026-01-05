@@ -1,5 +1,5 @@
 <?php
-// 🔐 Swix Dashboard - Session Yönetimi Helper
+// 🔐 Swixx Dashboard - Session Yönetimi Helper
 // Session işlemlerini kolaylaştıran yardımcı fonksiyonlar
 
 /**

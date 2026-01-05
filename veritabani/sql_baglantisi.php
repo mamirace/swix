@@ -1,5 +1,5 @@
 <?php
-// 🗄️ Swix Dashboard - MySQL Bağlantı Yöneticisi
+// 🗄️ Swixx Dashboard - MySQL Bağlantı Yöneticisi
 // Python sql_baglantisi.py dosyasının PHP karşılığı
 
 require_once __DIR__ . '/../yapılandırma/ayarlar.php';

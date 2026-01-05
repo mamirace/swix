@@ -1,6 +1,6 @@
 <?php
 /**
- * 🐘 Swix Dashboard - Ana Giriş Dosyası
+ * 🐘 Swixx Dashboard - Ana Giriş Dosyası
  * Web hosting ve Apache sunucular için standart index.php
  */
 

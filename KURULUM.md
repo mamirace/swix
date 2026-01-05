@@ -1,4 +1,4 @@
-# 🐘 Swix Dashboard - Kurulum Rehberi
+# 🐘 Swixx Dashboard - Kurulum Rehberi
 
 ## Web Hosting Kurulumu (Önerilen)
 
@@ -35,7 +35,7 @@ php -S localhost:3000 router.php
 ### XAMPP ile Test
 - XAMPP'ı başlatın (Apache + MySQL)
 - Proje klasörünü `htdocs/` içine kopyalayın
-- `http://localhost/swix/` adresine gidin
+- `http://localhost/swixx/` adresine gidin
 
 ## Dosya Yapısı
 ```

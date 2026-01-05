@@ -1,9 +1,9 @@
 <?php
-// 🗄️ Swix Dashboard - Veritabanı Modülü
+// 🗄️ Swixx Dashboard - Veritabanı Modülü
 // Python __init__.py dosyasının PHP karşılığı
 
 /**
- * Swix Dashboard MySQL Veritabanı Modülü
+ * Swixx Dashboard MySQL Veritabanı Modülü
  * 
  * Bu modül şunları içerir:
  * - MySQL bağlantı yönetimi

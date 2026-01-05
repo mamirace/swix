@@ -1,6 +1,6 @@
 {
-    "name": "swix/dashboard-php",
-    "description": "Swix Dashboard - Modern PHP Vuexy Admin Dashboard",
+    "name": "swixx/dashboard-php",
+    "description": "Swixx Dashboard - Modern PHP Vuexy Admin Dashboard",
     "version": "1.0.0",
     "type": "project",
     "license": "MIT",

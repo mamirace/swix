@@ -1,5 +1,5 @@
 <?php
-// 🔧 Swix Dashboard - PHP Yapılandırma Ayarları  
+// 🔧 Swixx Dashboard - PHP Yapılandırma Ayarları  
 // Python ayarlar.py dosyasının PHP karşılığı
 // Bu dosya uygulamanın tüm yapılandırma ayarlarını içerir
 
@@ -17,19 +17,22 @@ function ayarlar_yukle() {
     $_ENV['PORT'] = '3000';
     $_ENV['HOST'] = 'localhost';
     $_ENV['PHP_ENV'] = 'development';
-    $_ENV['SESSION_SECRET'] = 'swix-dashboard-secret-2026';
+    // Environment variables
+    $_ENV['SESSION_SECRET'] = 'swixx-dashboard-secret-2026';
+    $_ENV['PHP_ENV'] = 'production'; // Production modunu zorla
     
     $sunucu_ayarlari = [
         'port' => (int)($_ENV['PORT'] ?? 3000),
         'host' => $_ENV['HOST'] ?? 'localhost',
-        'ortam' => $_ENV['PHP_ENV'] ?? 'development'
+        'ortam' => $_ENV['PHP_ENV'] ?? 'production'
     ];
     
     $uygulama_ayarlari = [
-        'ad' => 'Swix Dashboard',
+        'ad' => 'Swixx Dashboard',
         'versiyon' => '1.0.0',
         'aciklama' => 'Modern PHP Vuexy Admin Dashboard',
-        'yazar' => 'mamirace'
+        'yazar' => 'mamirace',
+        'base_url' => $_ENV['BASE_URL'] ?? 'http://localhost:3000'
     ];
     
     $rota_ayarlari = [
@@ -47,7 +50,7 @@ function ayarlar_yukle() {
     ];
     
     $guvenlik_ayarlari = [
-        'session_gizli_anahtar' => $_ENV['SESSION_SECRET'] ?? 'swix-dashboard-secret-2026',
+        'session_gizli_anahtar' => $_ENV['SESSION_SECRET'] ?? 'swixx-dashboard-secret-2026',
         'cookie_max_age' => 24 * 60 * 60 * 1000,  // 24 saat
         'https_zorunlu' => ($_ENV['PHP_ENV'] ?? 'development') === 'production'
     ];
@@ -62,13 +65,25 @@ function ayarlar_yukle() {
         'baglanti_timeout' => 30
     ];
     
+    // SMTP E-posta ayarları (Hostinger için)
+    $smtp_ayarlari = [
+        'host' => $_ENV['SMTP_HOST'] ?? 'smtp.hostinger.com',
+        'port' => (int)($_ENV['SMTP_PORT'] ?? 465),
+        'username' => $_ENV['SMTP_USER'] ?? 'info@swixx.bilgeguc.io',
+        'password' => $_ENV['SMTP_PASS'] ?? '7348799Mib!',
+        'encryption' => $_ENV['SMTP_ENCRYPTION'] ?? 'ssl',
+        'from_email' => $_ENV['FROM_EMAIL'] ?? 'info@swixx.bilgeguc.io',
+        'from_name' => $_ENV['FROM_NAME'] ?? 'Swixx Dashboard'
+    ];
+    
     return [
         'sunucu_ayarlari' => $sunucu_ayarlari,
         'uygulama_ayarlari' => $uygulama_ayarlari,
         'rota_ayarlari' => $rota_ayarlari,
         'varlıklar_yolu' => $varlıklar_yolu,
         'guvenlik_ayarlari' => $guvenlik_ayarlari,
-        'veritabani_ayarlari' => $veritabani_ayarlari
+        'veritabani_ayarlari' => $veritabani_ayarlari,
+        'smtp' => $smtp_ayarlari
     ];
 }
 

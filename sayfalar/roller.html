@@ -14,7 +14,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
-    <title>Demo: Roles - Apps | Vuexy - Bootstrap Dashboard PRO</title>
+    <title>Roller - Swixx Dashboard</title>
 
     <meta name="description" content="" />
 
@@ -77,34 +77,9 @@
             <div class="navbar-brand app-brand demo d-none d-xl-flex py-0 me-4 ms-0">
               <a href="index.html" class="app-brand-link">
                 <span class="app-brand-logo demo">
-                  <span class="text-primary">
-                    <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M0.00172773 0V6.85398C0.00172773 6.85398 -0.133178 9.01207 1.98092 10.8388L13.6912 21.9964L19.7809 21.9181L18.8042 9.88248L16.4951 7.17289L9.23799 0H0.00172773Z"
-                        fill="currentColor" />
-                      <path
-                        opacity="0.06"
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M7.69824 16.4364L12.5199 3.23696L16.5541 7.25596L7.69824 16.4364Z"
-                        fill="#161616" />
-                      <path
-                        opacity="0.06"
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M8.07751 15.9175L13.9419 4.63989L16.5849 7.28475L8.07751 15.9175Z"
-                        fill="#161616" />
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M7.77295 16.3566L23.6563 0H32V6.88383C32 6.88383 31.8262 9.17836 30.6591 10.4057L19.7824 22H13.6938L7.77295 16.3566Z"
-                        fill="currentColor" />
-                    </svg>
-                  </span>
+                  <img src="/assets/img/branding/logo.png" alt="Swixx Logo" width="32" height="32">
                 </span>
-                <span class="app-brand-text demo menu-text fw-bold text-heading">Vuexy</span>
+                <span class="app-brand-text demo menu-text fw-bold text-heading">Swixx</span>
               </a>
 
               <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-xl-none">
@@ -623,7 +598,7 @@
                     </li>
                     <li>
                       <div class="d-grid px-2 pt-2 pb-1">
-                        <a class="btn btn-sm btn-danger d-flex" href="auth-login-cover.html" target="_blank">
+                        <a class="btn btn-sm btn-danger d-flex" href="/logout">
                           <small class="align-middle">Logout</small>
                           <i class="icon-base ti tabler-logout ms-2 icon-14px"></i>
                         </a>
@@ -1866,11 +1841,11 @@
 
             <!-- Content -->
             <div class="container-xxl flex-grow-1 container-p-y">
-              <h4 class="mb-1">Roles List</h4>
+              <h4 class="mb-1">Roller Listesi</h4>
 
               <p class="mb-6">
-                A role provided access to predefined menus and features so that depending on <br />
-                assigned role an administrator can have access to what user needs.
+                Bir rol, önceden tanımlanmış menülere ve özelliklere erişim sağlar, böylece atanan role bağlı olarak <br />
+                bir yönetici, kullanıcının ihtiyaç duyduğu şeylere erişim sağlayabilir.
               </p>
               <!-- Role cards -->
               <div class="row g-6">
@@ -1878,7 +1853,7 @@
                   <div class="card">
                     <div class="card-body">
                       <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h6 class="fw-normal mb-0 text-body">Total 4 users</h6>
+                        <h6 class="fw-normal mb-0 text-body">Toplam 4 kullanıcı</h6>
                         <ul class="list-unstyled d-flex align-items-center avatar-group mb-0">
                           <li
                             data-bs-toggle="tooltip"
@@ -1916,13 +1891,14 @@
                       </div>
                       <div class="d-flex justify-content-between align-items-end">
                         <div class="role-heading">
-                          <h5 class="mb-1">Administrator</h5>
+                          <h5 class="mb-1">Admin</h5>
                           <a
                             href="javascript:;"
                             data-bs-toggle="modal"
                             data-bs-target="#addRoleModal"
                             class="role-edit-modal"
-                            ><span>Edit Role</span></a
+                            data-role-id="1"
+                            ><span>Rolü Düzenle</span></a
                           >
                         </div>
                         <a href="javascript:void(0);"><i class="icon-base ti tabler-copy icon-md text-heading"></i></a>
@@ -1934,64 +1910,7 @@
                   <div class="card">
                     <div class="card-body">
                       <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h6 class="fw-normal mb-0 text-body">Total 7 users</h6>
-                        <ul class="list-unstyled d-flex align-items-center avatar-group mb-0">
-                          <li
-                            data-bs-toggle="tooltip"
-                            data-popup="tooltip-custom"
-                            data-bs-placement="top"
-                            title="Jimmy Ressula"
-                            class="avatar pull-up">
-                            <img class="rounded-circle" src="/assets/img/avatars/4.png" alt="Avatar" />
-                          </li>
-                          <li
-                            data-bs-toggle="tooltip"
-                            data-popup="tooltip-custom"
-                            data-bs-placement="top"
-                            title="John Doe"
-                            class="avatar pull-up">
-                            <img class="rounded-circle" src="/assets/img/avatars/1.png" alt="Avatar" />
-                          </li>
-                          <li
-                            data-bs-toggle="tooltip"
-                            data-popup="tooltip-custom"
-                            data-bs-placement="top"
-                            title="Kristi Lawker"
-                            class="avatar pull-up">
-                            <img class="rounded-circle" src="/assets/img/avatars/2.png" alt="Avatar" />
-                          </li>
-                          <li class="avatar">
-                            <span
-                              class="avatar-initial rounded-circle pull-up"
-                              data-bs-toggle="tooltip"
-                              data-bs-placement="bottom"
-                              title="4 more"
-                              >+4</span
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="d-flex justify-content-between align-items-end">
-                        <div class="role-heading">
-                          <h5 class="mb-1">Manager</h5>
-                          <a
-                            href="javascript:;"
-                            data-bs-toggle="modal"
-                            data-bs-target="#addRoleModal"
-                            class="role-edit-modal"
-                            ><span>Edit Role</span></a
-                          >
-                        </div>
-                        <a href="javascript:void(0);"><i class="icon-base ti tabler-copy icon-md text-heading"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                  <div class="card">
-                    <div class="card-body">
-                      <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h6 class="fw-normal mb-0 text-body">Total 5 users</h6>
+                        <h6 class="fw-normal mb-0 text-body">Toplam 5 kullanıcı</h6>
                         <ul class="list-unstyled d-flex align-items-center avatar-group mb-0">
                           <li
                             data-bs-toggle="tooltip"
@@ -2022,7 +1941,7 @@
                               class="avatar-initial rounded-circle pull-up"
                               data-bs-toggle="tooltip"
                               data-bs-placement="bottom"
-                              title="2 more"
+                              title="2 tane daha"
                               >+2</span
                             >
                           </li>
@@ -2030,127 +1949,14 @@
                       </div>
                       <div class="d-flex justify-content-between align-items-end">
                         <div class="role-heading">
-                          <h5 class="mb-1">Users</h5>
+                          <h5 class="mb-1">User</h5>
                           <a
                             href="javascript:;"
                             data-bs-toggle="modal"
                             data-bs-target="#addRoleModal"
                             class="role-edit-modal"
-                            ><span>Edit Role</span></a
-                          >
-                        </div>
-                        <a href="javascript:void(0);"><i class="icon-base ti tabler-copy icon-md text-heading"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                  <div class="card">
-                    <div class="card-body">
-                      <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h6 class="fw-normal mb-0 text-body">Total 3 users</h6>
-                        <ul class="list-unstyled d-flex align-items-center avatar-group mb-0">
-                          <li
-                            data-bs-toggle="tooltip"
-                            data-popup="tooltip-custom"
-                            data-bs-placement="top"
-                            title="Kim Karlos"
-                            class="avatar pull-up">
-                            <img class="rounded-circle" src="/assets/img/avatars/3.png" alt="Avatar" />
-                          </li>
-                          <li
-                            data-bs-toggle="tooltip"
-                            data-popup="tooltip-custom"
-                            data-bs-placement="top"
-                            title="Katy Turner"
-                            class="avatar pull-up">
-                            <img class="rounded-circle" src="/assets/img/avatars/9.png" alt="Avatar" />
-                          </li>
-                          <li
-                            data-bs-toggle="tooltip"
-                            data-popup="tooltip-custom"
-                            data-bs-placement="top"
-                            title="Peter Adward"
-                            class="avatar pull-up">
-                            <img class="rounded-circle" src="/assets/img/avatars/4.png" alt="Avatar" />
-                          </li>
-                          <li class="avatar">
-                            <span
-                              class="avatar-initial rounded-circle pull-up"
-                              data-bs-toggle="tooltip"
-                              data-bs-placement="bottom"
-                              title="3 more"
-                              >+3</span
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="d-flex justify-content-between align-items-end">
-                        <div class="role-heading">
-                          <h5 class="mb-1">Support</h5>
-                          <a
-                            href="javascript:;"
-                            data-bs-toggle="modal"
-                            data-bs-target="#addRoleModal"
-                            class="role-edit-modal"
-                            ><span>Edit Role</span></a
-                          >
-                        </div>
-                        <a href="javascript:void(0);"><i class="icon-base ti tabler-copy icon-md text-heading"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                  <div class="card">
-                    <div class="card-body">
-                      <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h6 class="fw-normal mb-0 text-body">Total 2 users</h6>
-                        <ul class="list-unstyled d-flex align-items-center avatar-group mb-0">
-                          <li
-                            data-bs-toggle="tooltip"
-                            data-popup="tooltip-custom"
-                            data-bs-placement="top"
-                            title="Kim Merchent"
-                            class="avatar pull-up">
-                            <img class="rounded-circle" src="/assets/img/avatars/10.png" alt="Avatar" />
-                          </li>
-                          <li
-                            data-bs-toggle="tooltip"
-                            data-popup="tooltip-custom"
-                            data-bs-placement="top"
-                            title="Sam D'souza"
-                            class="avatar pull-up">
-                            <img class="rounded-circle" src="/assets/img/avatars/13.png" alt="Avatar" />
-                          </li>
-                          <li
-                            data-bs-toggle="tooltip"
-                            data-popup="tooltip-custom"
-                            data-bs-placement="top"
-                            title="Nurvi Karlos"
-                            class="avatar pull-up">
-                            <img class="rounded-circle" src="/assets/img/avatars/5.png" alt="Avatar" />
-                          </li>
-                          <li class="avatar">
-                            <span
-                              class="avatar-initial rounded-circle pull-up"
-                              data-bs-toggle="tooltip"
-                              data-bs-placement="bottom"
-                              title="7 more"
-                              >+7</span
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="d-flex justify-content-between align-items-end">
-                        <div class="role-heading">
-                          <h5 class="mb-1">Restricted User</h5>
-                          <a
-                            href="javascript:;"
-                            data-bs-toggle="modal"
-                            data-bs-target="#addRoleModal"
-                            class="role-edit-modal"
-                            ><span>Edit Role</span></a
+                            data-role-id="2"
+                            ><span>Rolü Düzenle</span></a
                           >
                         </div>
                         <a href="javascript:void(0);"><i class="icon-base ti tabler-copy icon-md text-heading"></i></a>
@@ -2176,11 +1982,11 @@
                             data-bs-target="#addRoleModal"
                             data-bs-toggle="modal"
                             class="btn btn-sm btn-primary mb-4 text-nowrap add-new-role">
-                            Add New Role
+                            Yeni Rol Ekle
                           </button>
                           <p class="mb-0">
-                            Add new role, <br />
-                            if it doesn't exist.
+                            Yeni rol ekle, <br />
+                            eğer yoksa.
                           </p>
                         </div>
                       </div>
@@ -2199,229 +2005,65 @@
                     <div class="modal-body">
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       <div class="text-center mb-6">
-                        <h4 class="role-title">Add New Role</h4>
-                        <p class="text-body-secondary">Set role permissions</p>
+                        <h4 class="role-title">Yeni Rol Ekle</h4>
+                        <p class="text-body-secondary">Rol izinlerini ayarlayın</p>
                       </div>
                       <!-- Add role form -->
-                      <form id="addRoleForm" class="row g-3" onsubmit="return false">
+                      <form id="addRoleForm" class="row g-3">
                         <div class="col-12 form-control-validation mb-3">
-                          <label class="form-label" for="modalRoleName">Role Name</label>
+                          <label class="form-label" for="modalRoleName">Rol Adı</label>
                           <input
                             type="text"
                             id="modalRoleName"
                             name="modalRoleName"
                             class="form-control"
-                            placeholder="Enter a role name"
+                            placeholder="Rol adını girin"
                             tabindex="-1" />
                         </div>
                         <div class="col-12">
-                          <h5 class="mb-6">Role Permissions</h5>
+                          <h5 class="mb-6">Rol İzinleri</h5>
                           <!-- Permission table -->
                           <div class="table-responsive">
                             <table class="table table-flush-spacing">
+                              <thead>
+                                <tr>
+                                  <th class="text-nowrap fw-medium">Sayfa</th>
+                                  <th class="text-nowrap fw-medium text-end">İzinler</th>
+                                </tr>
+                              </thead>
                               <tbody>
                                 <tr>
                                   <td class="text-nowrap fw-medium">
-                                    Administrator Access
+                                    Yönetici Erişimi
                                     <i
                                       class="icon-base ti tabler-info-circle icon-xs"
                                       data-bs-toggle="tooltip"
                                       data-bs-placement="top"
-                                      title="Allows a full access to the system"></i>
+                                      title="Sisteme tam erişim sağlar"></i>
                                   </td>
                                   <td>
                                     <div class="d-flex justify-content-end">
                                       <div class="form-check mb-0">
                                         <input class="form-check-input" type="checkbox" id="selectAll" />
-                                        <label class="form-check-label" for="selectAll"> Select All </label>
+                                        <label class="form-check-label" for="selectAll"> Tümünü Seç </label>
                                       </div>
                                     </div>
                                   </td>
                                 </tr>
-                                <tr>
-                                  <td class="text-nowrap fw-medium text-heading">User Management</td>
-                                  <td>
-                                    <div class="d-flex justify-content-end">
-                                      <div class="form-check mb-0 me-4 me-lg-12">
-                                        <input class="form-check-input" type="checkbox" id="userManagementRead" />
-                                        <label class="form-check-label" for="userManagementRead"> Read </label>
-                                      </div>
-                                      <div class="form-check mb-0 me-4 me-lg-12">
-                                        <input class="form-check-input" type="checkbox" id="userManagementWrite" />
-                                        <label class="form-check-label" for="userManagementWrite"> Write </label>
-                                      </div>
-                                      <div class="form-check mb-0">
-                                        <input class="form-check-input" type="checkbox" id="userManagementCreate" />
-                                        <label class="form-check-label" for="userManagementCreate"> Create </label>
-                                      </div>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-nowrap fw-medium text-heading">Content Management</td>
-                                  <td>
-                                    <div class="d-flex justify-content-end">
-                                      <div class="form-check mb-0 me-4 me-lg-12">
-                                        <input class="form-check-input" type="checkbox" id="contentManagementRead" />
-                                        <label class="form-check-label" for="contentManagementRead"> Read </label>
-                                      </div>
-                                      <div class="form-check mb-0 me-4 me-lg-12">
-                                        <input class="form-check-input" type="checkbox" id="contentManagementWrite" />
-                                        <label class="form-check-label" for="contentManagementWrite"> Write </label>
-                                      </div>
-                                      <div class="form-check mb-0">
-                                        <input class="form-check-input" type="checkbox" id="contentManagementCreate" />
-                                        <label class="form-check-label" for="contentManagementCreate"> Create </label>
-                                      </div>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-nowrap fw-medium text-heading">Disputes Management</td>
-                                  <td>
-                                    <div class="d-flex justify-content-end">
-                                      <div class="form-check mb-0 me-4 me-lg-12">
-                                        <input class="form-check-input" type="checkbox" id="dispManagementRead" />
-                                        <label class="form-check-label" for="dispManagementRead"> Read </label>
-                                      </div>
-                                      <div class="form-check mb-0 me-4 me-lg-12">
-                                        <input class="form-check-input" type="checkbox" id="dispManagementWrite" />
-                                        <label class="form-check-label" for="dispManagementWrite"> Write </label>
-                                      </div>
-                                      <div class="form-check mb-0">
-                                        <input class="form-check-input" type="checkbox" id="dispManagementCreate" />
-                                        <label class="form-check-label" for="dispManagementCreate"> Create </label>
-                                      </div>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-nowrap fw-medium text-heading">Database Management</td>
-                                  <td>
-                                    <div class="d-flex justify-content-end">
-                                      <div class="form-check mb-0 me-4 me-lg-12">
-                                        <input class="form-check-input" type="checkbox" id="dbManagementRead" />
-                                        <label class="form-check-label" for="dbManagementRead"> Read </label>
-                                      </div>
-                                      <div class="form-check mb-0 me-4 me-lg-12">
-                                        <input class="form-check-input" type="checkbox" id="dbManagementWrite" />
-                                        <label class="form-check-label" for="dbManagementWrite"> Write </label>
-                                      </div>
-                                      <div class="form-check mb-0">
-                                        <input class="form-check-input" type="checkbox" id="dbManagementCreate" />
-                                        <label class="form-check-label" for="dbManagementCreate"> Create </label>
-                                      </div>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-nowrap fw-medium text-heading">Financial Management</td>
-                                  <td>
-                                    <div class="d-flex justify-content-end">
-                                      <div class="form-check mb-0 me-4 me-lg-12">
-                                        <input class="form-check-input" type="checkbox" id="finManagementRead" />
-                                        <label class="form-check-label" for="finManagementRead"> Read </label>
-                                      </div>
-                                      <div class="form-check mb-0 me-4 me-lg-12">
-                                        <input class="form-check-input" type="checkbox" id="finManagementWrite" />
-                                        <label class="form-check-label" for="finManagementWrite"> Write </label>
-                                      </div>
-                                      <div class="form-check mb-0">
-                                        <input class="form-check-input" type="checkbox" id="finManagementCreate" />
-                                        <label class="form-check-label" for="finManagementCreate"> Create </label>
-                                      </div>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-nowrap fw-medium text-heading">Reporting</td>
-                                  <td>
-                                    <div class="d-flex justify-content-end">
-                                      <div class="form-check mb-0 me-4 me-lg-12">
-                                        <input class="form-check-input" type="checkbox" id="reportingRead" />
-                                        <label class="form-check-label" for="reportingRead"> Read </label>
-                                      </div>
-                                      <div class="form-check mb-0 me-4 me-lg-12">
-                                        <input class="form-check-input" type="checkbox" id="reportingWrite" />
-                                        <label class="form-check-label" for="reportingWrite"> Write </label>
-                                      </div>
-                                      <div class="form-check mb-0">
-                                        <input class="form-check-input" type="checkbox" id="reportingCreate" />
-                                        <label class="form-check-label" for="reportingCreate"> Create </label>
-                                      </div>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-nowrap fw-medium text-heading">API Control</td>
-                                  <td>
-                                    <div class="d-flex justify-content-end">
-                                      <div class="form-check mb-0 me-4 me-lg-12">
-                                        <input class="form-check-input" type="checkbox" id="apiRead" />
-                                        <label class="form-check-label" for="apiRead"> Read </label>
-                                      </div>
-                                      <div class="form-check mb-0 me-4 me-lg-12">
-                                        <input class="form-check-input" type="checkbox" id="apiWrite" />
-                                        <label class="form-check-label" for="apiWrite"> Write </label>
-                                      </div>
-                                      <div class="form-check mb-0">
-                                        <input class="form-check-input" type="checkbox" id="apiCreate" />
-                                        <label class="form-check-label" for="apiCreate"> Create </label>
-                                      </div>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-nowrap fw-medium text-heading">Repository Management</td>
-                                  <td>
-                                    <div class="d-flex justify-content-end">
-                                      <div class="form-check mb-0 me-4 me-lg-12">
-                                        <input class="form-check-input" type="checkbox" id="repoRead" />
-                                        <label class="form-check-label" for="repoRead"> Read </label>
-                                      </div>
-                                      <div class="form-check mb-0 me-4 me-lg-12">
-                                        <input class="form-check-input" type="checkbox" id="repoWrite" />
-                                        <label class="form-check-label" for="repoWrite"> Write </label>
-                                      </div>
-                                      <div class="form-check mb-0">
-                                        <input class="form-check-input" type="checkbox" id="repoCreate" />
-                                        <label class="form-check-label" for="repoCreate"> Create </label>
-                                      </div>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-nowrap fw-medium text-heading">Payroll</td>
-                                  <td>
-                                    <div class="d-flex justify-content-end">
-                                      <div class="form-check mb-0 me-4 me-lg-12">
-                                        <input class="form-check-input" type="checkbox" id="payrollRead" />
-                                        <label class="form-check-label" for="payrollRead"> Read </label>
-                                      </div>
-                                      <div class="form-check mb-0 me-4 me-lg-12">
-                                        <input class="form-check-input" type="checkbox" id="payrollWrite" />
-                                        <label class="form-check-label" for="payrollWrite"> Write </label>
-                                      </div>
-                                      <div class="form-check mb-0">
-                                        <input class="form-check-input" type="checkbox" id="payrollCreate" />
-                                        <label class="form-check-label" for="payrollCreate"> Create </label>
-                                      </div>
-                                    </div>
-                                  </td>
-                                </tr>
+                                <!-- Sayfa satırları JavaScript tarafından dinamik olarak eklenecek -->
                               </tbody>
                             </table>
                           </div>
                           <!-- Permission table -->
                         </div>
                         <div class="col-12 text-center">
-                          <button type="submit" class="btn btn-primary me-sm-4 me-1">Submit</button>
+                          <button type="submit" class="btn btn-primary me-sm-4 me-1">Gönder</button>
                           <button
                             type="reset"
                             class="btn btn-label-secondary"
                             data-bs-dismiss="modal"
                             aria-label="Close">
-                            Cancel
+                            İptal
                           </button>
                         </div>
                       </form>
@@ -2524,5 +2166,6 @@
     <!-- Page JS -->
     <script src="/assets/js/app-access-roles.js"></script>
     <script src="/assets/js/modal-add-role.js"></script>
+    <script src="/assets/js/roller-yonetimi.js"></script>
   </body>
 </html>

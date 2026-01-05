@@ -1,4 +1,4 @@
-# 🐍 Swix Dashboard - Python Flask Edition
+# 🐍 Swixx Dashboard - Python Flask Edition
 
 Modern ve profesyonel CRM dashboard uygulaması. **Vuexy Bootstrap 5** teması ile **Python Flask** backend entegrasyonu.
 
@@ -20,7 +20,7 @@ Modern ve profesyonel CRM dashboard uygulaması. **Vuexy Bootstrap 5** teması i
 ## 🗂️ Kurumsal Klasör Yapısı
 
 ```
-swix/
+swixx/
 ├── 📁 genel/                    # Yardımcı fonksiyonlar
 │   └── yardımcılar.py          # Python utilities
 ├── 📁 sayfalar/                # HTML sayfaları (tema dosyaları)
@@ -140,7 +140,7 @@ npm run dev            # Development mode
 ```
 
 ### GitHub Pages & Hosting:
-- **Repository:** https://github.com/mamirace/swix
+- **Repository:** https://github.com/mamirace/swixx
 - **GitHub Pages:** Static serving
 - **Hostinger/Railway/Heroku:** Full Node.js support
 
@@ -183,15 +183,15 @@ MIT License - Ticari kullanım için uygundur.
 ## 📞 İletişim
 
 - **GitHub:** [@mamirace](https://github.com/mamirace)
-- **Repository:** [swix](https://github.com/mamirace/swix)
-- **Issues:** [GitHub Issues](https://github.com/mamirace/swix/issues)
+- **Repository:** [swixx](https://github.com/mamirace/swixx)
+- **Issues:** [GitHub Issues](https://github.com/mamirace/swixx/issues)
 
 ---
 
-> 🎉 **Swix Dashboard** - Türkiye'nin ilk kurumsal Vuexy Node.js template'i!
+> 🎉 **Swixx Dashboard** - Türkiye'nin ilk kurumsal Vuexy Node.js template'i!
 - **Vercel:** Zero-config deployment
 
-**GitHub Repository:** https://github.com/mamirace/swix
+**GitHub Repository:** https://github.com/mamirace/swixx
 
 ## 🚀 Hostinger'a Yükleme
 

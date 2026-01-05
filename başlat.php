@@ -1,6 +1,6 @@
 <?php
 /**
- * 🐘 Swix Dashboard - PHP Development Server Başlatıcısı
+ * 🐘 Swixx Dashboard - PHP Development Server Başlatıcısı
  * Sadece PHP Built-in Server için kullanılır
  * Web hosting için index.php kullanın!
  */
@@ -23,7 +23,7 @@ if (!defined('PROJE_KOK')) {
 $request_uri = $_SERVER['REQUEST_URI'] ?? '/';
 $uri = parse_url($request_uri, PHP_URL_PATH);
 
-echo "🐘 Development Server - URI: " . $uri . "\n";
+error_log("🐘 Development Server - URI: " . $uri);
 
 // Ana uygulamayı başlat
 require_once __DIR__ . '/sunucu/sunucu.php';

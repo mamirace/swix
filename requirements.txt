@@ -1,7 +1,0 @@
-# Swix Dashboard - Python Flask Bağımlılıkları
-# Bu dosya Python projesi için gerekli paketleri listeler
-
-flask>=3.0.0
-python-dotenv>=1.0.0
-psutil>=5.9.0
-mysql-connector-python>=8.0.0

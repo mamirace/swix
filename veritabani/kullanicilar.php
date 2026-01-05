@@ -1,5 +1,5 @@
 <?php
-// 👥 Swix Dashboard - Kullanicilar Login Kontrol
+// 👥 Swixx Dashboard - Kullanicilar Login Kontrol
 // Python kullanicilar.py dosyasının PHP karşılığı
 // Basit login fonksiyonu
 
